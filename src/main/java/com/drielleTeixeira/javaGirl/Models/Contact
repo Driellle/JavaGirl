@@ -1,0 +1,52 @@
+@Entity
+@JsonIgnore
+@GeneratedValue(strategy = GenerationType.IDENTITY)
+private Long id;
+
+@NotBlank(message = "Campo nome é obrigatório")
+private String name;
+
+@NotBlank(message = "Campo nome é obrigatório")
+private String email;
+
+private String phone;
+
+public Contact(){
+}
+
+public Contact(Long id, String name, String email, String phone){
+	
+	this.id = id;
+	this.name = name;
+	this.email = email;
+	this.phone = phone;
+}
+
+public void setName(String name){
+	this.name = name;
+}
+
+public String getName(){
+	return name;
+}
+
+public void setEmail(String Email){
+	this.email = Email;
+}
+
+public String getEmail(){
+	return email;
+}
+
+public void setPhone(String Phone){
+	this.phone = Phone;
+}
+
+public String getPhone(){
+	return phone;
+}
+
+public Long getId(){
+	return id;
+}
+
